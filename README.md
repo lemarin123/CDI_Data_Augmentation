@@ -54,6 +54,13 @@ python resnet-training.py --test_only  --model_path  /set/your/model/path/resnet
 ```
 python test.py --net_type pyramidnet  --dataset cifar100  --batch_size 128 --depth 200 --alpha 240  --pretrained /set/your/model/path/model_best.pth.tar
 ```
+
+### Test of  Robustness to Adversarial Attacks
+- Test your trained models:
+```
+python fgsm_test.py --net_type pyramidnet  --batch_size 128 --depth 200 --alpha 240 --fgsm True --eps 1  --pretrained  /set/your/model/path/model_best.pth.tar
+```
+
 ## WSOL results
 ![sample_1875_iou_0 806](https://github.com/user-attachments/assets/3f96ddab-cf19-4655-9324-03aaa948d91b)
 
