@@ -21,7 +21,7 @@ The domain change between training and real-world datasets causes deep neural ne
 - The  testing code on cifar100 and cifar10 with pyramid net is from: [CutMix](https://github.com/clovaai/CutMix-PyTorch)
 - The training code is a modified version as it supports ResNet-18 and multiple regularization techniques.
 Use arguments:
-inter_ratio  >0 To train with CDI, example:  --inter_ratio  0.7
+inter_ratio  >0 To train with CDI, example:  inter_ratio  0.7
 SLCDI True  To train SLCDI
 cutmix_prob  >0 To train with Cutmix , example:  -- cutmix_prob 0.5
 cutout True  To train with cutout
