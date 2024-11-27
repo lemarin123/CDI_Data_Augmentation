@@ -32,7 +32,7 @@ SLCDI True  To train SLCDI
 - example 1: training pyramidnet 110 with SLCDI  
 python train.py --net_type pyramidnet  --depth 110 --alpha 64   --dataset cifar100  --batch_size 64 --lr 0.25 --expname PyraNet200_inter_08_test1 --epochs 300 --beta 1.0 --cutmix_prob 0.0 --no-verbose --inter_ratio 0.8 --SLCDI True --fine_tune False --cutout False
 
-- example 2: training Resnet-18 on cifar-100 with SLCDI 
+- example 2: training Resnet-18 on cifar-100 with CDI 
 python train.py --net_type resnet18 --dataset cifar100  --batch_size 64 --lr 0.25 --expname resnet_experiment --epochs 300 --beta 1.0 --cutmix_prob 0.0 --no-verbose --inter_ratio 0.8 --SLCDI False
 
 ```
