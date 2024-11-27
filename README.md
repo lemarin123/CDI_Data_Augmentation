@@ -41,7 +41,7 @@ Download Tiny-imagenet from [here](https://www.kaggle.com/datasets/akash2sharma/
  
 - Training:
 ```
-python resnet-training.py --expname cutout --cutmix_prob 0.0  --lr 0.1 --cutout False --Interlacing_ratio 0.7
+python resnet-training.py --expname tiny_img_inter07 --cutmix_prob 0.0  --lr 0.1 --cutout False --Interlacing_ratio 0.7
 ```
 - Testing:
 Replace model_path 
