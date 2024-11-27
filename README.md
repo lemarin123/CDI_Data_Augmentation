@@ -30,8 +30,8 @@ for pyramidnet , select : --depth 110 --alpha 64 or  --depth 200 --alpha 240
 python train.py --net_type pyramidnet  --depth 110 --alpha 64   --dataset cifar100  --batch_size 64 --lr 0.25 --expname PyraNet200_inter_08_test1 --epochs 300 --beta 1.0 --cutmix_prob 0.0 --no-verbose --inter_ratio 0.8 --SLCDI True --fine_tune False --cutout False
 
 ```
-- Tiny-Imagnet
-  Download Tiny-imagenet from:
+- Tiny-Imagnet:
+Download Tiny-imagenet from [here] (https://www.kaggle.com/datasets/akash2sharma/tiny-imagenet)
  
 - Training:
 ```
