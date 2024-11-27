@@ -31,7 +31,7 @@ python train.py --net_type pyramidnet  --depth 110 --alpha 64   --dataset cifar1
 
 ```
 - Tiny-Imagnet:
-Download Tiny-imagenet from [here] (https://www.kaggle.com/datasets/akash2sharma/tiny-imagenet)
+Download Tiny-imagenet from [here](https://www.kaggle.com/datasets/akash2sharma/tiny-imagenet)
  
 - Training:
 ```
