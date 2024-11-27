@@ -56,9 +56,16 @@ python test.py --net_type pyramidnet  --dataset cifar100  --batch_size 128 --dep
 ```
 
 ### Test of  Robustness to Adversarial Attacks
-- Test your trained models:
+- Test your trained models against Adversial attacks: We have the best score :)
 ```
 python fgsm_test.py --net_type pyramidnet  --batch_size 128 --depth 200 --alpha 240 --fgsm True --eps 1  --pretrained  /set/your/model/path/model_best.pth.tar
+```
+
+
+### Test of Uncertainty
+- Test your trained models:
+```
+python auroc_test.py --depth 200 --model_path   /set/your/model/path/model_best.pth.tar --unknown_dir /set/your/dataset/path/LSUN/test
 ```
 
 ## WSOL results
