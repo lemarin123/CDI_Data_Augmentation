@@ -49,7 +49,7 @@ Replace model_path
 python resnet-training.py --test_only  --model_path  /set/your/model/path/resnet_tiny_imagenet_best.pth
 ```
 
-### Test example 
+### Classification tests
 - Test your trained models:
 ```
 python test.py --net_type pyramidnet  --dataset cifar100  --batch_size 128 --depth 200 --alpha 240  --pretrained /set/your/model/path/model_best.pth.tar
