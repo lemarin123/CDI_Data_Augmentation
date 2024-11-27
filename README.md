@@ -17,7 +17,9 @@ The domain change between training and real-world datasets causes deep neural ne
 - NumPy 1.26
 - tqdm
 ### Train Examples
-- CIFAR-100 CIFAR 10 on:  Pyramid-200-240, Pyramid-110-64, resnet18
+- CIFAR-100 CIFAR 10 on:  Pyramid-200-240, Pyramid-110-64, resnet18.
+- The  testing code on cifar100 and cifar10 with pyramid net is from: [CutMix](https://github.com/clovaai/CutMix-PyTorch)
+- The training code is a modified version as it supports ResNet-18 and multiple regularization techniques.
 Use arguments:
 --inter_ratio  >0 To train with CDI, example:  --inter_ratio  0.7
 --SLCDI True  To train SLCDI
@@ -31,7 +33,7 @@ for pyramidnet , select : --depth 110 --alpha 64 or  --depth 200 --alpha 240
 python train.py --net_type pyramidnet  --depth 110 --alpha 64   --dataset cifar100  --batch_size 64 --lr 0.25 --expname PyraNet200_inter_08_test1 --epochs 300 --beta 1.0 --cutmix_prob 0.0 --no-verbose --inter_ratio 0.8 --SLCDI True --fine_tune False --cutout False
 
 - example 2: training Resnet-18 on cifar-100 with SLCDI 
-python train.py --net_type resnet18 --dataset cifar100  --batch_size 64 --lr 0.25 --expname resnet_experiment --epochs 300 --beta 1.0 --cutmix_prob 0.0 --no-verbose --inter_ratio 0.8 --SLCDI True
+python train.py --net_type resnet18 --dataset cifar100  --batch_size 64 --lr 0.25 --expname resnet_experiment --epochs 300 --beta 1.0 --cutmix_prob 0.0 --no-verbose --inter_ratio 0.8 --SLCDI False
 
 ```
 - Tiny-Imagnet:
@@ -44,12 +46,14 @@ python resnet-training.py --expname cutout --cutmix_prob 0.0  --lr 0.1 --cutout 
 - Testing:
 Replace model_path 
 ```
-python resnet-training.py --test_only  --model_path C:\data_augmentation\runs_tiny_imagnet\cutmix\resnet_tiny_imagenet_best.pth
+python resnet-training.py --test_only  --model_path  /set/your/model/path/resnet_tiny_imagenet_best.pth
 ```
 
-
-
-
+### Test example 
+- Test your trained models:
+```
+python test.py --net_type pyramidnet  --dataset cifar100  --batch_size 128 --depth 200 --alpha 240  --pretrained /set/your/model/path/model_best.pth.tar
+```
 ## WSOL results
 ![sample_1875_iou_0 806](https://github.com/user-attachments/assets/3f96ddab-cf19-4655-9324-03aaa948d91b)
 
