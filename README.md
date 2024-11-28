@@ -74,7 +74,7 @@ python auroc_test.py --depth 200 --model_path   /set/your/model/path/model_best.
 
 - PyramidNet-200 pretrained on CIFAR-100 dataset:
 
-Method | Top-1 Error | FGSM | AUROC |Model file
+Method | Top-1 Error ↓ | FGSM ↓ | AUROC ↑ |Model file
 -- | -- | -- | -- | -- 
 PyramidNet-200 [[CVPR'17](https://arxiv.org/abs/1610.02915)] (baseline) | 16.45 | 67.42 | 89.12 | [model](https://www.dropbox.com/sh/6rfew3lr761jq6c/AADrdQOXNx5tWmgOSnAw9NEVa?dl=0)
 PyramidNet-200 + CutMix | **14.23** | 60.09 | 88.70 | [model](https://www.dropbox.com/sh/o68qbvayptt2rz5/AACy3o779BxoRqw6_GQf_QFQa?dl=0)
