@@ -108,7 +108,7 @@ Method | IOU@50 (%) ↑ | Correct Localizations ↑
 baseline | 75.75 | 8929
 CutMix | 79.22 | 9339 
 Cutout | 75.70 | 8924 
-CDI | 80.85 | 9531 
+CDI | **80.85** | **9531** 
 
 ![sample_1875_iou_0 806](https://github.com/user-attachments/assets/3f96ddab-cf19-4655-9324-03aaa948d91b)
 
