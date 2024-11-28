@@ -86,5 +86,29 @@ PyramidNet-200 + **CDI** | 15.84 | 73.55 | **92.06** | [model](https://www.dropb
 
 
 ## WSOL results
+
+<h2 id="experimentsWSOL"> WSOL Experimental Results </h2>
+
+- Resnet50 On CUB-200 dataset: **These results are not included in the submitted paper.**
+- The Grad_cam Threshold is 15%
+- The code is available in WSOL folder
+- Training:
+```
+python WSOL/train.py --net_choice ResNet --model_choice 50 
+
+```
+- Testing:
+Replace model_path 
+```
+python WSOL/gradcam-cub-evaluation.py --cub-path C:\data_augmentation\cub\CUB_200_2011 --output-dir ./gradcam_output_vis_cutout --model-path C:\data_augmentation\resnet_finetune_cub-master\Cub_model_save_cutout\model_best.pth.tar --use-cuda     --num-visualizations 50 --iou-threshold 0.5 --cam-threshold .15
+```
+
+Method | IOU@50 (%) ↑ | Correct Localizations ↑ 
+-- | -- | --  
+baseline | 75.75 | 8929
+CutMix | 79.22 | 9339 
+Cutout | 75.70 | 8924 
+CDI | 80.85 | 9531 
+
 ![sample_1875_iou_0 806](https://github.com/user-attachments/assets/3f96ddab-cf19-4655-9324-03aaa948d91b)
 
