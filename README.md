@@ -100,7 +100,7 @@ python WSOL/train.py --net_choice ResNet --model_choice 50
 - Testing:
 Replace model_path 
 ```
-python WSOL/gradcam-cub-evaluation.py --cub-path C:\data_augmentation\cub\CUB_200_2011 --output-dir ./gradcam_output_vis_cutout --model-path C:\data_augmentation\resnet_finetune_cub-master\Cub_model_save_cutout\model_best.pth.tar --use-cuda     --num-visualizations 50 --iou-threshold 0.5 --cam-threshold .15
+python WSOL/gradcam_cub_evaluation.py --cub-path C:\data_augmentation\cub\CUB_200_2011 --output-dir ./gradcam_output_vis_cutout --model-path C:\data_augmentation\resnet_finetune_cub-master\Cub_model_save_cutout\model_best.pth.tar --use-cuda     --num-visualizations 50 --iou-threshold 0.5 --cam-threshold .15
 ```
 
 Method | IOU@50 (%) ↑ | Correct Localizations ↑ 
