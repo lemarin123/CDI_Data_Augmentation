@@ -1,7 +1,7 @@
 # CDI_Data_Augmentation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Submitted paper to CVPR 2025
+
 ## Title: Cross-Domain Interlacing Data Augmentation: A Regularization Approach for Multi-Domain Computer Vision
 
 ## Abstract:
